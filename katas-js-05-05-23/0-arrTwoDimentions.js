@@ -13,10 +13,12 @@ input
 const inverseArr = (arr) => {
   let a, b, c;
   let result= [];
-  for (let i=0; i<=arr.length; i++) {
+
+  for (let i=0; i<arr.length; i++) {
     a = arr[0][i]
     b = arr[1][i]
     c = arr[2][i]
+
     let newArr = [a, b, c];
     result.push(newArr);
   }
