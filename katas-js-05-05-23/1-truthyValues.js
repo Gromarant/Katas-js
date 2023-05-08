@@ -5,15 +5,15 @@ Ejemplos de input
 
 const hasTruthy = (arr) => {
   let result;
-  for(let i=0; i<=arr.length; i++) {
-    const falsies = [false, 0, -0, 0n, "", null, undefined, NaN];
-    
-     result = falsies.find(falsy => falsy !== arr[i]);
-    // if (arr[i] !== false || arr[i] !== 0 || arr[i] !== -0 || arr[i] !== 0n || arr[i] !== "" || arr[i] !== null || arr[i] !== undefined || arr[i] !== NaN) {
-      
-    // }
-   }
+  for(let i=0; i<arr.length; i++) {
+    if (arr[i]) {
+      result = true;
+    } else {
+      result = false;
+    }
+  }
   return result;
 }
 
-hasTruthy([null, false,1])
+console.log(hasTruthy([0, null, undefined, NaN]))
+console.log(hasTruthy([null, false, 1, "0"]))
