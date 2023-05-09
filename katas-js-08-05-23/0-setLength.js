@@ -9,4 +9,4 @@ const longestSubArr = (arr) => {
   return [...newArr].length;
 }
 
-console.log(longestSubArr(arrOriginal))
+console.log(longestSubArr(arrOriginal));
