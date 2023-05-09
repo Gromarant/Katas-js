@@ -4,16 +4,10 @@ Ejemplos de input
 [null, false,1]  --> true (edited)  */
 
 const hasTruthy = (arr) => {
-  let result;
-  for(let i=0; i<arr.length; i++) {
-    if (arr[i]) {
-      result = true;
-    } else {
-      result = false;
-    }
-  }
-  return result;
+  let truthy = arr.filter(ele =>  ele == true ? ele: false);
+  if (truthy.length !== 0) { return truthy }
+  else { return false }
 }
 
-console.log(hasTruthy([0, null, undefined, NaN]))
-console.log(hasTruthy([null, false, 1, "0"]))
+console.log(hasTruthy([null, false,1]))
+console.log(hasTruthy([ 0, null, undefined, NaN]))
